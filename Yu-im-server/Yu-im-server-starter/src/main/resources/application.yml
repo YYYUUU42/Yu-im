@@ -1,0 +1,38 @@
+server:
+  port: 8888
+  id: 1
+
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 1
+
+websocket:
+  enable: true
+  port: 8878
+
+tcpsocket:
+  enable: false # 暂时不开启
+  port: 8879
+
+heartbeat:
+  count: 10
+
+jwt:
+  accessToken:
+    secret: yu123456  # 跟im-platfrom的secret必须一致
+
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: im-server-group
+
+message:
+  mq:
+    type: rocketmq
+
+
+distributed:
+  cache:
+    type: redis
